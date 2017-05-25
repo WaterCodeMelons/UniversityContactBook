@@ -37,7 +37,6 @@
 
     function init() {
         var contacts = loadContacts();
-        var contactsCathedral = loadContactsCathedral();
         
 		ListView.render({
 			bindings: bindings,
