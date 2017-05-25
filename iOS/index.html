@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="with-statusbar-overlay">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Książka Kontaktowa UE Katowice</title>
+    <link rel="stylesheet" href="lib/css/framework7.css">
+    <link rel="stylesheet" href="lib/css/cards.ios.css">
+    <link rel="stylesheet" href="lib/css/ionicons.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link href="img/favicon2.png" rel="shortcut icon">
+</head>
+
+<body>
+    <!-- Statusbar overlay-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels Overlay -->
+    <div class="panel-overlay"></div>
+    <!-- Left Panel with Reveal effect -->
+    <div class="panel panel-left panel-reveal">
+        <div class="list-block">
+            <div class="list-group">
+                <ul>
+                    <li class="item-content list-panel-favorites close-panel item-link">
+                        <div class="item-media"><i class="icon ion-ios7-star"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">Ulubione</div>
+                        </div>
+                    </li>
+                    <a href="index.html"><li class="item-content list-panel-all close-panel item-link">
+                        <div class="item-media"><i class="icon ion-ios7-home"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">Wszystkie kontakty</div>
+                        </div>
+                        </li></a>
+                    <li class="item-content list-panel-department close-panel item-link">
+                        <div class="item-media"><i class="icon ion-cube"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">Sortuj Wydziałami</div>
+                        </div>
+                    </li>
+                    <li class="item-content list-panel-cathedral close-panel item-link">
+                        <div class="item-media"><i class="icon ion-ios7-paper"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">Sortuj Katedrami</div>
+                        </div>
+                    </li>
+                    <a href="wydzial.html"><li class="item-content close-panel item-link">
+                        <div class="item-media"><i class="icon ion-filing"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">Wydziały z katedrami</div>
+                        </div>
+                        </li></a>
+                    <li class="item-content list-panel-poll close-panel item-link">
+                        <div class="item-media"><i class="icon ion-ios7-help"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title close-panel open-popup">Oceń naszą aplikację</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Views-->
+    <div class="views">
+        <div class="view view-main navbar-fixed">
+            <div class="navbar theme-white">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                    <div class="center sliding contacts-list-header">Książka Kontaktów Uniwersytetu Ekonomicznego w Katowicach</div>
+                </div>
+            </div>
+            <div class="pages">
+                <div data-page="list" class="page">
+                    <!-- Search bar -->
+                    <form class="searchbar" data-search-list=".contacts-list" data-search-in=".item-title">
+                        <div class="searchbar-input">
+                            <input type="search" placeholder="Szukaj">
+                            <a href="#" class="searchbar-clear"></a>
+                        </div>
+                        <a href="#" class="searchbar-cancel">Cofnij</a>
+                    </form>
+
+                    <!-- Search bar overlay-->
+                    <div class="searchbar-overlay"></div>
+
+                    <div class="page-content">
+                        <div class="list-block media-list contacts-list searchbar-found">
+                            <div class="list-group">
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="content-block searchbar-not-found">
+                            Nic nie znaleziono
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup popup-about">
+        <div class="content-block">
+            <p class="ankieta">Ankieta dotycząca aplikacji Książka Kontaktowa UE Katowice</p>
+            <p></p>
+            <p class="ankieta"><a href="#" class="close-popup">Zamknij ankietę</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript" src="lib/lodash.js"></script>
+<script type="text/javascript" src="lib/framework7.js"></script>
+<script data-main="app" src="lib/require.js"></script>

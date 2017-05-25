@@ -1,0 +1,73 @@
+<div class="page-content">
+	<div class="contact-header">
+		<div class="item-photo">
+			<img src="img/cats/{{model.picId}}.png">
+		</div>
+		<div class="header-text">
+			{{#if model.isFavorite}}<i class="icon icon-favorite ion-ios7-star"></i>{{/if}}
+			<h3>{{model.academicTitle}} {{model.firstName}} {{model.lastName}}</h3>
+			<p>Katedra {{model.cathedral}}</p>
+		</div>
+	</div>
+	<div class="list-block">
+		<div class="list-group">
+			<ul>
+				{{#if model.phone}}
+					<li>
+						<a href="tel:{{model.phone}}" class="item-link item-content external">
+							<div class="item-media"><i class="icon ion-ios7-telephone-outline"></i></div>
+							<div class="item-inner">
+								<div class="item-title">{{model.phone}}</div>
+							</div>
+						</a>
+					</li>
+				{{/if}}
+				{{#if model.email}}
+					<li>
+						<a href="mailto:{{model.email}}" class="item-link item-content external">
+							<div class="item-media"><i class="icon ion-ios7-email-outline"></i></div>
+							<div class="item-inner">
+								<div class="item-title">{{model.email}}</div>
+							</div>
+						</a>
+					</li>
+				{{/if}}
+                {{#if model.department}}
+                    <li class="item-content">
+                        <div class="item-media"><i class="icon ion-cube"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">Wydział </div>
+                            <div class="item-content">{{model.department}}</div>
+                       </div>
+                        </li>
+                {{/if}}
+				{{#if model.consultations}}
+					<li class="item-content">
+						<div class="item-media"><i class="icon ion-ios7-calendar-outline"></i></div>
+						<div class="item-inner">
+							<div class="item-title">Konsultacje: </div>
+                            <div class="item-content">{{model.consultations}}</div>    
+						</div>
+					</li>
+				{{/if}}
+                
+                    <li class="item-content">
+                        <div class="item-media"><i class="icon ion-ios7-star-outline"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">{{model.isFavourite}}Dodaj do ulubionych</div>
+                            <div class="item-after">
+                                <label class="label-switch" >
+                                    <input id="isFavorite" type="checkbox" {{#if model.isFavorite}} checked="on" {{/if}} >
+                                    <div class="checkbox"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                              
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
